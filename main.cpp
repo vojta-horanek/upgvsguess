@@ -17,7 +17,16 @@ int main()
 	std::string bla = "";
 	for (int i = 0; i<100; i++)
 	{
-		cout << endl << bla << ">" << i << "/100";
+		cout << endl << bla << ">" << i << "/100  ";
+		
+		std::this_thread::sleep_for(std::chrono::milliseconds(500));
+		std::cout << "\b\\" << std::flush;
+		std::this_thread::sleep_for(std::chrono::milliseconds(500));
+		std::cout << "\b|" << std::flush;
+		std::this_thread::sleep_for(std::chrono::milliseconds(500));
+		std::cout << "\b/" << std::flush;
+		std::this_thread::sleep_for(std::chrono::milliseconds(500));
+		std::cout << "\b-" << std::flush;
 
 		if (i >= 85 && i <= 89)
 		{
